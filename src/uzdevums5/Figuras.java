@@ -62,6 +62,34 @@ public class Figuras {
 				OIzveide.izveidotObjektu();
 				break;
 				
+			case 2:
+				poga = JOptionPane.showOptionDialog(null, 
+						"Kuras figūras aplūkot?", "Izvēle", 
+				JOptionPane.YES_NO_CANCEL_OPTION, 
+				JOptionPane.QUESTION_MESSAGE, null, 
+				objektuPogas, objektuPogas[0]);
+				
+				switch(poga) {
+				case 0:
+					if(centraObjekti.size()<1) {
+						JOptionPane.showMessageDialog(null, 
+						"Nav neviens centra punkts!", "Brīdinājums", 
+						JOptionPane.WARNING_MESSAGE);
+						break;
+					}
+					JOptionPane.showMessageDialog(null, 
+					IzveidotieObjekti.izvaditCentru(centraObjekti), 
+					"Centra punkti", JOptionPane.PLAIN_MESSAGE);
+					break;
+					
+					// Uztaisīt pārējo objektu izvadi
+				}
+				break;
+				
+			case 3:
+				// Metožu izsaukšana, turpināsim šeit....
+				break;
+				
 			}
 		} while (izvele != 0);
 		
